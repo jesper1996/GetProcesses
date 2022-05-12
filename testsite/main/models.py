@@ -1,32 +1,18 @@
 from django.db import models
 
-
-
-# Testing models
-class ToDoList(models.Model):
-    name = models.CharField(max_length=200)
-    
-
-    def __str__(self):
-        return self.name
-
-
-class Item(models.Model):
-    todolist = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
-    text = models.CharField(max_length=300)
-    complete = models.BooleanField()
-
-    def __str__(self):
-        return self.text
-
 class Processes(models.Model):
-    name = models.CharField(default='test', max_length=5000)
-    for_delete = models.CharField(default='test', max_length=5000)
+    processData = models.CharField(default='test', max_length=5000)
     
     def __str__(self):
-        return self.name
+        return self.processData
+
+    # removing extra s
+    class Meta:
+        verbose_name_plural = "Processes"
 
 
-    
+
+
+
 
 

@@ -1,3 +1,5 @@
+For Windows.
+
 Everytime the application is started the objects in the database are cleared and filled with new objects (processes).
 
 http://127.0.0.1:8000/ takes you to the get view and shows the data.
